@@ -1,0 +1,25 @@
+{
+  "swfs": [
+    {
+      "location": "swfs/CatNinja.swf",
+      "title": "CAT NINJA (Normal)",
+      "author": "T3RM1N4L",
+      "authorLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "config": {
+        "autoplay": "on",
+        "backgroundColor": "#000000",
+        "letterbox": "off",
+        "unmuteOverlay": "hidden",
+        "forceScale": false,
+        "forceAlign": false
+      }
+    }, {
+      "location": "swfs/cnpractice.swf",
+      "title": "CAT NINJA (practice)",
+      "author": "T3RM1N4L",
+      "authorLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "type": "Animation"
+      
+    }
+  ]
+}
