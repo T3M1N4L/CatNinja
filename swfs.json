@@ -2,6 +2,7 @@
   "swfs": [
     {
       "location": "swfs/CatNinja.swf",
+      "type": "Normal",
       "title": "CAT NINJA (Normal)",
       "author": "T3RM1N4L",
       "authorLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
