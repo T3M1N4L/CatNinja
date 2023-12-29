@@ -2352,8 +2352,8 @@ volume-controls-volume = 音量
             all: initial;
             pointer-events: inherit;
 
-            --ruffle-blue: #37528c;
-            --ruffle-orange: #ffad33;
+            --ruffle-blue: #000000;
+            --ruffle-orange: #80ffbf;
 
             display: inline-block;
             position: relative;
