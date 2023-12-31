@@ -1,4 +1,5 @@
-# Cat Ninja Online
+# <img src="https://raw.githubusercontent.com/T3M1N4L/CatNinja/main/CatNinja.gif" alt="CatNinja" style="float:right;width:42px;height:36.5166667px;"> Cat Ninja Online
+
 **Features:**
 * Normal version
 * Practice version ( by @HFKOOL)
