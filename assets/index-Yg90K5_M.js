@@ -2684,3 +2684,9 @@ function __vite__mapDeps(indexes) {
   }
   return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
 }
+
+document.body.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            window.location.replace("https://google.com/");
+        }
+    });
