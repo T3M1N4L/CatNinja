@@ -3,7 +3,7 @@
 * Normal version
 * Practice version ( by @HFKOOL)
 * It's online bruhv
-* Don't question the favicon. I did this bcuz I play too much CatNinja in school lol
+* Clic `Esc` to possibly delete from history (don't know if it works lol)
 # Links (incase one is not wokring)
 https://9a60ecd2-f289-4437-ab1b-617394879cbc.id.repl.co/
 
