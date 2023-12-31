@@ -5,7 +5,7 @@
 * It's online bruhv
 * Clic `Esc` to possibly delete from history (don't know if it works lol)
 # Links (incase one is not wokring)
-https://9a60ecd2-f289-4437-ab1b-617394879cbc.id.repl.co/
+https://cb29c3c9-2986-499d-af68-146eeeeb017c.id.repl.co
 
 https://catninja.t3rm1n4l.repl.co/
 
