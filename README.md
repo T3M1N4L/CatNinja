@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/T3M1N4L/CatNinja/main/CsatNinja.gif" alt="CatNinja" style="width:42px;height:36.5166667px;"> Cat Ninja Online
+# <img src="https://raw.githubusercontent.com/T3M1N4L/CatNinja/main/CatNinja.gif" alt="CatNinja" style="width:42px;height:36.5166667px;"> Cat Ninja Online
 Cat Ninja Flash Game
 
 Cat Ninja: The Search For The Magical Energy Crystals
