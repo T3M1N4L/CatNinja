@@ -1,6 +1,8 @@
 # <img src="https://raw.githubusercontent.com/T3M1N4L/CatNinja/main/CatNinja.gif" alt="CatNinja" style="float:right;width:42px;height:36.5166667px;"> Cat Ninja Online
 Cat Ninja Flash Game
+
 Cat Ninja: The Search For The Magical Energy Crystals
+
 Cat Ninja is made by - Richman Stewart on https://trackmill.com
 
 **Features:**
