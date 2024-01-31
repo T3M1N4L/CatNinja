@@ -28,6 +28,13 @@
       "authorLink": "https://www.speedrun.com/users/Hfkool",
       "type": "Map"
       
+    }, {
+      "location": "swfs/GlitchEditor.swf",
+      "title": "CAT NINJA (Editor ver)",
+      "author": "T3RM1N4L",
+      "authorLink": "https://github.com/T3M1N4L/CatNinja/",
+      "type": "Editor"
+      
     }
   ]
 }
