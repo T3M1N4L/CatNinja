@@ -19,21 +19,34 @@
       "title": "CAT NINJA (practice)",
       "author": "hfkool",
       "authorLink": "https://www.speedrun.com/users/Hfkool",
-      "type": "Practice"
+      "type": "Practice",
+      "config": {
+        "forceScale": false,
+        "forceAlign": false
+      }
+      
       
     }, {
       "location": "swfs/catninjamap.swf",
       "title": "CAT NINJA (Map ver)",
       "author": "hfkool",
       "authorLink": "https://www.speedrun.com/users/Hfkool",
-      "type": "Map"
+      "type": "Map",
+      "config": {
+        "forceScale": false,
+        "forceAlign": false
+      }
       
     }, {
       "location": "swfs/GlitchEditor.swf",
       "title": "CAT NINJA (Editor ver)",
       "author": "T3RM1N4L",
       "authorLink": "https://github.com/T3M1N4L/CatNinja/",
-      "type": "Editor"
+      "type": "Editor",
+      "config": {
+        "forceScale": false,
+        "forceAlign": false
+      }
       
     }
   ]
