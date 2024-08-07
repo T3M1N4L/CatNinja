@@ -8,9 +8,12 @@ Cat Ninja is made by - Richman Stewart on https://trackmill.com
 **Features:**
 * Normal version
 * Practice version ( by @HFKOOL)
+* Map version ( by @HFKOOL)
+* Editor version ( by original author built by T3RM1N4L)
 * It's online bruhv
 * Click `Esc` to possibly delete from history (don't know if it works lol)
 # Links (incase one is not wokring)
+
 https://cb29c3c9-2986-499d-af68-146eeeeb017c.id.repl.co
 
 https://catninja.t3rm1n4l.repl.co/
@@ -18,6 +21,8 @@ https://catninja.t3rm1n4l.repl.co/
 https://catninja--t3rm1n4l.repl.co/
 
 https://catninja.vercel.app/
+
+https://cat-ninja.netlify.app/
 
 https://cat-ninja-git-main-t3rm1n4ls-projects.vercel.app/
 
