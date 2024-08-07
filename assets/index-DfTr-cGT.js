@@ -7298,7 +7298,7 @@ function Gm({
         id: "nav",
         children: [j.jsx("a", {
             id: "logo-container",
-            href: "https://ruffle.rs/",
+            href: "./README",
             target: "_blank",
             children: j.jsx("img", {
                 className: "logo",

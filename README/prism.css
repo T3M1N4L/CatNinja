@@ -1,15 +1,24 @@
 /* PrismJS 1.29.0 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
-@font-face {
-    font-family: PIXEL ;
-    src: url(fonts/04B_03__.TTF);
+
+a:link {color: rgb(65, 255, 151);}  
+
+:root {
+	--color-fg-default: #c9d1d9;
+	--color-bg-code-block: #060606;
+	--color-bg-inline-code-block: rgb(110 118 129 / 40%);
+	--color-gray: #8b949e;
+	--color-red: #ff7b72;
+	--color-green: #7ee787;
+	--color-blue: #79c0ff;
+	--color-indigo: #a5d6ff;
+	--color-purple: #d2a8ff;
+	--color-brown: #ffa657;
 }
-a:link {color: rgb(124, 255, 244);}  
-a:visited {color: rgb(124, 255, 244);}  
-a:hover {color: #80f4ff}  
-a:active {color: #ae82ff}  
+
 *{
-    font-family: 'PIXEL', sans-serif;
-    color: white;
+    font-family: monospace !important;
+    font-family: monospace ,sans-serif;
+    color: #c9d1d9;
     scroll-behavior: smooth;
 }
 
@@ -29,235 +38,521 @@ h3
 {
     margin-left: 25px;
 }
-code[class*=language-],pre[class*=language-]{
-    color:#ccc;
+
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+	background-color: var(--color-bg-code-block);
+	color: var(--color-fg-default);
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	tab-size: 2;
+	hyphens: none;
+        font-size: inherit;
+    hyphens: none;
+    line-height: 1.6;
+    color: #d6deeb;
+    text-align: left;
+    word-break: normal;
+    word-wrap: normal;
+    tab-size: 4;
+    tab-size: 4;
+    tab-size: 4;
+    white-space: pre;
+    word-spacing: normal;
+    -webkit-font-smoothing: auto;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	font-size: 0.875rem;
+	font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    padding: 25px;
+    margin-top: 3.2vmin;
+	overflow: auto;
+	border-radius: 8px;
+    
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	font-size: 1rem;
+	background-color: var(--color-bg-inline-code-block);
+	padding: 0.2em 0.3em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+
+@media (width <= 700px) {
+	:not(pre) > code[class*="language-"] {
+		font-size: 0.875rem;
+	}
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+	color: var(--color-gray);
+}
+
+.token.doctype,
+.token.punctuation,
+.token.entity {
+	color: var(--color-fg-default);
+}
+
+.token.attr-name,
+.token.class-name,
+.token.boolean,
+.token.constant,
+.token.number,
+.token.atrule {
+	color: var(--color-blue);
+}
+
+.token.keyword {
+	color: var(--color-indigo);
+}
+
+.token.property,
+.token.tag,
+.token.symbol,
+.token.deleted,
+.token.important {
+	color: var(--color-green);
+}
+
+.token.selector,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.regex,
+.token.attr-value,
+.token.attr-value > .token.punctuation {
+	color: var(--color-blue);
+}
+
+.token.variable,
+.token.operator,
+.token.function {
+	color: var(--color-indigo);
+}
+
+.token.url {
+	color: var(--color-green);
+}
+
+/* HTML overrides */
+.token.attr-value > .token.punctuation.attr-equals,
+.token.special-attr > .token.attr-value > .token.value.css {
+	color: var(--color-fg-default);
+}
+
+/* CSS overrides */
+.language-css .token.selector {
+	color: var(--color-green);
+}
+
+.language-css .token.property {
+	color: var(--color-blue);
+}
+
+.language-css .token.important,
+.language-css .token.atrule .token.rule {
+	color: var(--color-red);
+}
+
+/* JS overrides */
+.language-js .token.keyword,
+.language-javascript .token.keyword {
+	color: var(--color-red);
+}
+
+.language-js .token.operator,
+.language-js .token.constant,
+.language-js .token.boolean,
+.language-js .token.number,
+.language-js .token.atrule,
+.language-javascript .token.operator,
+.language-javascript .token.constant,
+.language-javascript .token.boolean,
+.language-javascript .token.number,
+.language-javascript .token.atrule {
+	color: var(--color-blue);
+}
+
+.language-js .token.function,
+.language-javascript .token.function {
+	color: var(--color-purple);
+}
+
+.language-js .token.attr-name,
+.language-js .token.class-name,
+.language-js .token.function-variable,
+.language-javascript .token.attr-name,
+.language-javascript .token.class-name,
+.language-javascript .token.function-variable {
+	color: var(--color-brown);
+}
+
+/* JSX overrides */
+.language-jsx .token.keyword {
+	color: var(--color-red);
+}
+
+.language-jsx .token.function {
+	color: var(--color-purple);
+}
+
+.language-jsx .token.function-variable {
+	color: var(--color-brown);
+}
+
+.language-jsx .token.punctuation {
+	color: var(--color-blue);
+}
+
+.language-jsx .token.attr-name,
+.language-jsx .token.class-name {
+	color: var(--color-green);
+}
+
+.language-jsx .token.string {
+	color: var(--color-indigo);
+}
+
+/* JSON overrides */
+.language-json .token.operator {
+	color: var(--color-fg-default);
+}
+
+.language-json .token.null.keyword {
+	color: var(--color-blue);
+}
+
+/* Java overrides */
+.language-java .token.keyword {
+	color: var(--color-red);
+}
+
+.language-java .token.operator,
+.language-java .token.constant,
+.language-java .token.boolean,
+.language-java .token.number,
+.language-java .token.atrule {
+	color: var(--color-blue);
+}
+
+.language-java .token.function {
+	color: var(--color-purple);
+}
+
+.language-java .token.attr-name,
+.language-java .token.function-variable {
+	color: var(--color-green);
+}
+
+/* Kotlin overrides */
+.language-kotlin .token.keyword {
+	color: var(--color-red);
+}
+
+.language-kotlin .token.operator,
+.language-kotlin .token.constant,
+.language-kotlin .token.boolean,
+.language-kotlin .token.number,
+.language-kotlin .token.atrule {
+	color: var(--color-blue);
+}
+
+.language-kotlin .token.function {
+	color: var(--color-purple);
+}
+
+.language-kotlin .token.attr-name,
+.language-kotlin .token.function-variable {
+	color: var(--color-green);
+}
+
+/* Go overrides */
+.language-go .token.keyword {
+	color: var(--color-red);
+}
+
+.language-go .token.operator,
+.language-go .token.constant,
+.language-go .token.boolean,
+.language-go .token.number,
+.language-go .token.atrule {
+	color: var(--color-blue);
+}
+
+.language-go .token.function {
+	color: var(--color-purple);
+}
+
+.language-go .token.attr-name,
+.language-go .token.function-variable {
+	color: var(--color-green);
+}
+
+/* YAML overrides */
+.language-yml .token.atrule,
+.language-yaml .token.atrule {
+	color: var(--color-green);
+}
+
+/* Dockerfile overrides */
+.language-dockerfile .token.keyword {
+	color: var(--color-red);
+}
+
+.language-dockerfile .token.function {
+	color: var(--color-purple);
+}
+
+.language-dockerfile .token.punctuation {
+	color: var(--color-blue);
+}
+
+.language-dockerfile .token.attr-name,
+.language-dockerfile .token.class-name {
+	color: var(--color-green);
+}
+
+.language-dockerfile .token.string {
+	color: var(--color-indigo);
+}
+
+/* HCL overrides */
+.language-hcl .token.keyword {
+	color: var(--color-red);
+}
+
+.language-hcl .token.keyword:not(:has(span)) {
+	color: var(--color-purple);
+}
+
+.language-hcl .token.string {
+	color: var(--color-indigo);
+}
+
+.language-hcl .token.property,
+.language-hcl .token.punctuation {
+	color: var(--color-fg-default);
+}
+
+/* General */
+.token.bold {
+	font-weight: bold;
+}
+
+.token.comment,
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.namespace {
+	opacity: 0.8;
+}
+
+
+
+div.code-toolbar{
+    position:relative
+}
+div.code-toolbar>.toolbar{
+    position:absolute;
+    z-index:10;
+    top:.3em;
+    right:.2em;
+    transition:opacity .3s ease-in-out;
+    opacity:0
+}
+div.code-toolbar:hover>.toolbar{
+    opacity:1
+}
+div.code-toolbar:focus-within>.toolbar{
+    opacity:1
+}
+div.code-toolbar>.toolbar>.toolbar-item{
+    display:inline-block
+}
+div.code-toolbar>.toolbar>.toolbar-item>a{
+    cursor:pointer
+}
+div.code-toolbar>.toolbar>.toolbar-item>button{
     background:0 0;
-    font-family: 'PIXEL', sans-serif;
-    font-size:1em;
-    text-align:left;
-    white-space:pre;
-    word-spacing:normal;
-    word-break:normal;
-    word-wrap:normal;
-    line-height:1.5;
-    -moz-tab-size:4;
-    -o-tab-size:4;
-    tab-size:4;
-    -webkit-hyphens:none;
-    -moz-hyphens:none;
-    -ms-hyphens:none;
-    hyphens:none;
+    border:0;
+    color:inherit;
+    font:inherit;
+    line-height:normal;
+    overflow:visible;
+    padding:0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none
 }
-pre[class*=language-]{
-    padding:1em;
-    margin:.5em 0;
-    overflow:auto;
-    font-family: 'PIXEL', sans-serif;
+div.code-toolbar>.toolbar>.toolbar-item>a,div.code-toolbar>.toolbar>.toolbar-item>button,div.code-toolbar>.toolbar>.toolbar-item>span{
+    color:#2eff9e;
+    font-size: .8em;
+    padding:0 .5em;
+    background:#f5f2f0;
+    background:rgba(224,224,224,.2);
+    box-shadow:0 2px 0 0 rgba(0,0,0,.2);
+    border-radius:.5em
 }
-
-:not(pre)>code[class*=language-],pre[class*=language-]{
-    background:	#282b30;
-    border-radius: 15px;
-    width: 590px;
+div.code-toolbar>.toolbar>.toolbar-item>a:focus,div.code-toolbar>.toolbar>.toolbar-item>a:hover,div.code-toolbar>.toolbar>.toolbar-item>button:focus,div.code-toolbar>.toolbar>.toolbar-item>button:hover,div.code-toolbar>.toolbar>.toolbar-item>span:focus,div.code-toolbar>.toolbar>.toolbar-item>span:hover{
+    color:inherit;
+    text-decoration:none
 }
-:not(pre)>code[class*=language-]{
-    padding:.1em;
-    border-radius:.3em;
-    white-space:normal;
-    font-family: 'PIXEL', sans-serif;
-}
-.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{
-    color:#999
-}
-.token.punctuation{
-    color:#ccc
-}
-.token.attr-name,.token.deleted,.token.namespace,.token.tag{
-    color:#88a4ff
-}
-.token.function-name{
-    color:#6196cc
-}
-.token.boolean,.token.function,.token.number{
-    color:#f08d49
-}
-.token.class-name,.token.constant,.token.property,.token.symbol{
-    color:#78efff
-}
-.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{
-    color:#cc99cd
-}
-.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{
-    color:#83ffb2
-}
-.token.entity,.token.operator,.token.url{
-    color:#67cdcc
-}
-.token.bold,.token.important{
-    font-weight:700
-}
-.token.italic{
-    font-style:italic
-}
-.token.entity{
-    cursor:help
-}
-.token.inserted{
-    color:green
-}
-::-webkit-scrollbar
-{
-	width: 0px;
-    border-radius: 100px;
-}
-#scrollPath
-{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 10px;
-	height: 100%;
-	background: rgba(255,255,255,0.05);
-    border-radius: 100px;
-}
-#progressbar
-{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 10px;
-
-	background: linear-gradient(to top, #008aff,#00ffe7);
-	animation: animate 5s linear infinite;
-    border-radius: 100px;
-}
-@keyframes animate
-{
-	0%,100%
-	{
-		filter: hue-rotate(0deg);
-	}
-	50%
-	{
-		filter: hue-rotate(360deg);
-	}
-}
-.loader {
-    background: black;
-    background: black;
-    bottom: 0;
-    left: 0;
+/* Custom styles for theme */
+.code-wrapper {
+    position: relative;
     overflow: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 9999999999999;
-  }
-  
-  .loader-inner {
-    bottom: 0;
-    height: 60px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100px;
-  }
-  
-  .loader-line-wrap {
-    animation: 
-    spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
-  ;
-    box-sizing: border-box;
-    height: 50px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    transform-origin: 50% 100%;
-    width: 100px;
-  }
-  .loader-line {
-    border: 4px solid transparent;
-    border-radius: 100%;
-    box-sizing: border-box;
-    height: 100px;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100px;
-  }
-  .loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
-  .loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
-  .loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
-  .loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
-  .loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
-  
-  .loader-line-wrap:nth-child(1) .loader-line {
-    border-color: #f97583;
-    height: 90px;
-    width: 90px;
-    top: 7px;
-  }
-  .loader-line-wrap:nth-child(2) .loader-line {
-    border-color: #ffab70;
-    height: 76px;
-    width: 76px;
-    top: 14px;
-  }
-  .loader-line-wrap:nth-child(3) .loader-line {
-    border-color: #85e89d;
-    height: 62px;
-    width: 62px;
-    top: 21px;
-  }
-  .loader-line-wrap:nth-child(4) .loader-line {
-    border-color: #79b8ff;
-    height: 48px;
-    width: 48px;
-    top: 28px;
-  }
-  .loader-line-wrap:nth-child(5) .loader-line {
-    border-color: #b392f0;
-    height: 34px;
-    width: 34px;
-    top: 35px;
-  }
-  
-  @keyframes spin {
-    0%, 15% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-  }
-#progressbar:before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to top, #008aff,#00ffe7);
-    border-radius: 100px;
-	filter: blur(10px);
-}
-#progressbar:before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to top, #008aff,#00ffe7);
-	filter: blur(30px);
-    border-radius: 100px;
+    border-radius: 8px;
+    
 }
 
+.code-wrapper > pre[class*="language-"] {
+    margin-top: 0;
+}
+
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    color: rgb(230 202 168);
+    cursor: pointer;
+    background: transparent;
+    background-color: #011627;
+    border: none;
+}
+
+.copy-button svg {
+    width: 1em;
+    margin-left: 0.25em;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.copy-button:hover svg {
+    opacity: 1;
+}
+.code-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.code-wrapper > pre[class*="language-"] {
+    margin-top: 0;
+}
+
+
+div.code-toolbar{
+   position:relative
+}
+div.code-toolbar>.toolbar{
+   position:absolute;
+   z-index:10;
+   top:.3em;
+   right:.2em;
+   transition:opacity .3s ease-in-out;
+   opacity:1
+}
+
+div.code-toolbar>.toolbar>.toolbar-item{
+   display:inline-block
+}
+div.code-toolbar>.toolbar>.toolbar-item>a{
+   cursor:pointer
+}
+
+/* feature styles for buttons */
+
+/* icon copy */
+div.code-toolbar>.toolbar>.toolbar-item>button > span
+{
+   color: transparent;
+   background-color:#8234ff;
+   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'%3E%3C/path%3E%3Cpath d='M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z' fill='currentColor'%3E%3C/path%3E%3C/svg%3E");
+   mask-repeat: no-repeat no-repeat;
+   mask-position: center right;
+}
+
+/* hide icon copy */
+div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state=copy-success] > span ,
+div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state=copy-success]:hover > span
+{
+   mask-image: none;
+   color: #8234ff;
+   background-color: transparent;
+}
+
+/* color of "Copied!" */
+.copy-to-clipboard-button[data-copy-state~=copy-success] span {
+   color: #8234ff;
+}
+
+/* text copy is hidden */
+.copy-to-clipboard-button[data-copy-state=copy] span {
+   color: transparent;
+}
+
+/* default item color */
+div.code-toolbar>.toolbar>.toolbar-item {
+  color: #ad1fff; 
+}
+
+/* remove toolbar items decoration*/
+div.code-toolbar > .toolbar > .toolbar-item > a, 
+div.code-toolbar > .toolbar > .toolbar-item > button, 
+div.code-toolbar > .toolbar > .toolbar-item > span {
+   background-color: transparent;
+   border: 0;
+   box-shadow: none;
+}
+
+
+html {
+    scrollbar-face-color: #060606;
+    scrollbar-base-color: #060606;
+    scrollbar-3dlight-color: #060606;
+    scrollbar-highlight-color: #060606;
+    scrollbar-track-color: #040404;
+    scrollbar-arrow-color: #040404;
+    scrollbar-shadow-color: #060606;
+    scrollbar-dark-shadow-color: #060606;
+  }
   
+  ::-webkit-scrollbar { width: 8px; height: 3px;}
+  ::-webkit-scrollbar-track {  background-color: #060606;}
+  ::-webkit-scrollbar-track-piece { background-color: #040404;}
+  ::-webkit-scrollbar-thumb { height: 50px; background-color: #060606; border-radius: 3px;}
+  ::-webkit-scrollbar-corner { background-color: #060606;}
+  ::-webkit-resizer { background-color: #060606;}
+  .normlcode {
+    background: #060606;
+    border-radius: 5px;
+    line-height: 26px;
+    padding: 3px;
+    color: #888aff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight:9000 ;
+}
